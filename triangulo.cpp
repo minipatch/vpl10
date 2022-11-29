@@ -17,8 +17,10 @@ int Triangle::getPerimeter() const {
 double Triangle::getArea() const {
   // Here we use Heron's formula to compute the area
   double halfPerimeter = getPerimeter() / 2.0;
-  double radicand = halfPerimeter * (halfPerimeter - side1)  * (halfPerimeter - side2) * (halfPerimeter - side3);
-
+  double radicand = halfPerimeter
+                    * (halfPerimeter - side1)
+                    * (halfPerimeter - side2)
+                    * (halfPerimeter - side3);
   return sqrt(radicand);
 }
 
